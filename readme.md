@@ -1,4 +1,4 @@
-![]()
+![](https://imgur.com/aJie6RM.png)
 ### HENRY'S FUN WITH FACTS
 
 This app is intended to be a fun way to learn several details about countries around the world. The application will leverage several methods for evaluating the performance of each player such as:
@@ -21,7 +21,7 @@ The game will temporarily store the scores on the local storage before the playe
 ```
 
 ### Wireframe
-![](https://imgur.com/79Wn6VH)
+![](https://imgur.com/MTbA1uv.png)
 
 
 ### API 
