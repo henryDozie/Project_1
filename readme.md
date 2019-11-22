@@ -21,7 +21,7 @@ The game will temporarily store the scores on the local storage before the playe
 ```
 
 ### Wireframe
-![](https://imgur.com/MTbA1uv.png)
+![](https://imgur.com/uTKq12u.png)
 
 
 ### API 
