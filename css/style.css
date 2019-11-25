@@ -59,8 +59,37 @@ opacity: 0.8;
 border: 3px solid rgb(61, 50, 50);
 }
 
+@keyframes border {
+  0%{
+    /* border-color: pink; */
+    border: 3px solid pink;
+  }
+
+  25%{
+    /* border-color:?; */
+    border: 3px solid red;
+  }
+  50%{
+    /* border-color: green; */
+    border: 3px solid green;
+  }
+  75%{
+    /* border-color:; */
+    border: 3px solid black;
+  }
+  100%{
+    /* border-color: blue; */
+    border: 3px solid blue;
+  }
+}
+
 .topDiv:hover{
   border-color: green;
+  box-shadow: 10px 7px 17px pink;
+  animation-name: border;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+
 }
 
 .search-section{
@@ -94,7 +123,7 @@ border: 3px solid rgb(61, 50, 50);
   border-radius: 5cm;
   box-shadow: 8px 5px 15px grey;
   border-color: lightcoral;
-  cursor: progress;
+  /* cursor: url(///images/bear1.png), auto; */
 }
 
 .beneath-search{
@@ -102,7 +131,7 @@ border: 3px solid rgb(61, 50, 50);
   flex-direction: row;
   justify-content: space-evenly;
   margin: 10px auto;
-  height: 28.5vw;
+  height: 30.5vw;
   width: 95vw;
   background-color: black;
   border-radius: 5cm;
@@ -119,9 +148,31 @@ linear-gradient(90deg, #1B1B1B 10px, transparent 10px),
 linear-gradient(#1D1D1D 25%, #1A1A1A 25%, #1A1A1A 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
 background-color: #131313;
 background-size: 20px 20px;
-opacity: 0.9;
+opacity: 0.8;
 }
 
-#difficulty-box #level-box{
+#difficulty-box  #level-box{
+  height: 14.7vw;
+  width: 28vw;
+  background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1B1B1B 10px, transparent 10px),
+linear-gradient(#1D1D1D 25%, #1A1A1A 25%, #1A1A1A 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+border-radius: 5cm;
+box-shadow: 8px 5px 15px white;
+opacity: 1;
+border: 3px solid rgb(61, 50, 50);
+z-index: auto;
+}
   
+@media only screen and (min-width: 800px){
+  body{
+    width: 800px;
+    background-color: blue;
+  }
 }
