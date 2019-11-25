@@ -56,6 +56,11 @@ background-size: 20px 20px;
 border-radius: 5cm;
 box-shadow: 8px 5px 15px black;
 opacity: 0.8;
+border: 3px solid rgb(61, 50, 50);
+}
+
+.topDiv:hover{
+  border-color: green;
 }
 
 .search-section{
