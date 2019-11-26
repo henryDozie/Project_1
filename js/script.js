@@ -21,12 +21,12 @@ window.onload = function () {
 
   topDiv2.addEventListener('click', function () {
     // evt.preventDefault()
-    window.location.assign("https://www.yahoo.com");
+    window.location.assign("currencyGame.html");
   });
 
   topDiv3.addEventListener('click', function () {
     // evt.preventDefault()
-    window.location.assign("https://www.bing.com");
+    window.location.assign("langGame.html");
   });
 
 

@@ -11,18 +11,25 @@
 </head>
 
 <body>
-  <!-- <script type="text/javascript" src="http://htmlfreecodes.com/codes/rain.js"></script> -->
-  <header>H0W W3LL D0 YOU KNOW THE WORLD</header>
-  <div class="divContainer">
-    <div class="topDiv" id="cptlPgHead">
-      <h1>Tell me the capital of the country below!....</h1>
-    </div>
-    <div>
-        <input type="text" id="responseField" placeholder="THE ANSWER IS..">
-        <button id="search">SUBMIT!!!</button>
-    </div>
+  <div id="container">
+    <header id="questionContainer">
+      <div id="questionField"></div>
+    </header>
+      <main id="answersContainer">
+        <div class="lowerCircles" id="timeCircle"></div>
+        <div class="lowerCircles" id="responseCircle">
+            <button id="setCountry">SET COUNTRY</button>
+          <input id="input" type="text">
+          <button id="submitButton">SUBMIT</button>
+        </div>
+        <div class="lowerCircles" id="scoreCircle"></div>
+      </main>
+    <footer>
+        <div class="footerCircles" id="correct"></div>
+        <div class="footerCircles" id="wrong">
+    </footer>
   </div>
-  
+
 </body>
 
 </html>

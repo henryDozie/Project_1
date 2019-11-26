@@ -8,24 +8,13 @@ header{
 .divContainer{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 50vw;
+  justify-content: center;
+  width: 98vw;
   margin: 3px auto;
-  height: 15vw;
-  width: 90vw;
+  height: 20vh;
 }
 
 body {
-  /* background:
-    radial-gradient(pink 3px, transparent 4px),
-    radial-gradient(green 3px, transparent 4px),
-    linear-gradient(#fff 4px, transparent 0),
-    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
-    #fff;
-    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
-    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px; */
-    
     background:
 radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
 radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
@@ -38,12 +27,12 @@ radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
 linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
 linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
 background-color: #300;
-background-size: 100px 100px;
+background-size: 50px 50px;
 }
 
 .topDiv{
-  height: 14.7vw;
-  width: 28vw;
+  height: 10vh;
+  width: 29vw;
   background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
 linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -54,32 +43,73 @@ linear-gradient(#1D1D1D 25%, #1A1A1A 25%, #1A1A1A 50%, transparent 50%, transpar
 background-color: #131313;
 background-size: 20px 20px;
 border-radius: 5cm;
-box-shadow: 8px 5px 15px black;
 opacity: 0.8;
 border: 3px solid rgb(61, 50, 50);
+margin: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family:  'bradley hand';
+font-size: 20px;
+color: white;
 }
 
 @keyframes border {
   0%{
     /* border-color: pink; */
-    border: 3px solid pink;
+    border: 3px solid red;
+    box-shadow: black;
+  }
+  10%{
+    /* border-color: pink; */
+    border: 3px solid orange;
+    box-shadow: black;
+  }
+  20%{
+    /* border-color: pink; */
+    border: 3px solid yellow;
+    box-shadow: black;
   }
 
-  25%{
+  30%{
     /* border-color:?; */
-    border: 3px solid red;
+    border: 3px solid green;
+    box-shadow: green;
+  }
+  40%{
+    /* border-color: green; */
+    border: 3px solid blue;
+    box-shadow: yellow;
   }
   50%{
-    /* border-color: green; */
-    border: 3px solid green;
-  }
-  75%{
     /* border-color:; */
+    border: 3px solid purple;
+    box-shadow: blue;
+  }
+  60%{
+    /* border-color: blue; */
+    border: 3px solid violet;
+    box-shadow: orange;
+  }
+  70%{
+    /* border-color: pink; */
     border: 3px solid black;
+    box-shadow: black;
+  }
+  80%{
+    /* border-color: pink; */
+    border: 3px solid white;
+    box-shadow: black;
+  }
+  90%{
+    /* border-color: pink; */
+    border: 3px solid pink;
+    box-shadow: blue;
   }
   100%{
-    /* border-color: blue; */
-    border: 3px solid blue;
+    /* border-color: pink; */
+    border: 3px solid limegreen;
+    box-shadow: red;
   }
 }
 
@@ -87,32 +117,38 @@ border: 3px solid rgb(61, 50, 50);
   border-color: green;
   box-shadow: 10px 7px 17px pink;
   animation-name: border;
-animation-duration: 0.5s;
-animation-iteration-count: infinite;
-
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
 }
 
 .search-section{
-  /* background-color: lightcoral; */
   display: flex;
-  justify-content: space-evenly;
   margin: 0 auto;
-  height: 6vw;
-  width: 90vw;
+  justify-content: center;
+  background-color: black;
+  height: 8vh;
+  width: 100%;
   border-radius: 5cm;
+  /* color: white;
+  animation-name: wordScroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; */
   
 }
+.textLine {
+  color: white;
+  animation-name: wordScroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
 
-#blank{
-  display: flex;
-  justify-content: center;
-  width: 80vw;
-  border-block: pink;
-  border-radius: 5cm;
-  box-shadow: 8px 5px 15px grey;
-  border-color: lightcoral;
-  font-size: xx-large;
-  margin: 0 auto;
+@keyframes wordScroll{
+    0%{
+      justify-content: flex-start;
+      /* background: white; */
+    }
+    50%  {justify-content: center;}
+    100% {justify-content: flex-end;}
 }
 
 #search{
@@ -129,12 +165,11 @@ animation-iteration-count: infinite;
 .beneath-search{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin: 10px auto;
-  height: 30.5vw;
+  justify-content: center;
+  margin: 80px auto;
+  height: 48vh;
   width: 95vw;
-  background-color: black;
-  border-radius: 5cm;
+  border-radius: 10%;
   box-shadow: 8px 5px 15px black;
   border-color: lightcoral;
 
@@ -170,9 +205,4 @@ border: 3px solid rgb(61, 50, 50);
 z-index: auto;
 }
   
-@media only screen and (min-width: 800px){
-  body{
-    width: 800px;
-    background-color: blue;
-  }
-}
+
