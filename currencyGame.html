@@ -6,20 +6,28 @@
   <meta name="viewport" content="width=device-width" />
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="js/currencyGame.js" charset="utf-8"></script>
-  <!-- <link rel="stylesheet" href="css/currencyStyle.css" type="text/css" media="screen" title="no title" charset="utf-8"> -->
+  <link rel="stylesheet" href="css/currencyStyle.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <title>FWF</title>
 </head>
 
 <body>
-  <header>Let's Talk Money</header>
-  <div class="divContainer">
-    <div class="topDiv" id="cptlPgHead">
-      <h1>Tell me the capital of the country below!....</h1>
-    </div>
-    <div>
-      <input type="text" id="responseField" placeholder="THE ANSWER IS..">
-      <button id="search">SUBMIT!!!</button>
-    </div>
+  <div id="container">
+    <header id="questionContainer">
+      <div id="questionField"></div>
+    </header>
+    <main id="answersContainer">
+      <div class="lowerCircles" id="timeCircle"></div>
+      <div class="lowerCircles" id="responseCircle">
+        <button id="setCountry">SET COUNTRY</button>
+        <input id="input" type="text">
+        <button id="submitButton">SUBMIT</button>
+      </div>
+      <div class="lowerCircles" id="scoreCircle"></div>
+    </main>
+    <footer>
+      <div class="footerCircles" id="correct"></div>
+      <div class="footerCircles" id="wrong">
+    </footer>
   </div>
 
 </body>

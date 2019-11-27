@@ -71,7 +71,7 @@ window.onload = async function () {
       wrong.classList.add("styleWrong")
     }
 
-    console.log(score);
+    // console.log(score);
     
 
   })

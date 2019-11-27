@@ -34,24 +34,30 @@ background-size: 50px 50px;
   height: 10vh;
   width: 29vw;
   background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1B1B1B 10px, transparent 10px),
-linear-gradient(#1D1D1D 25%, #1A1A1A 25%, #1A1A1A 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
-border-radius: 5cm;
-opacity: 0.8;
-border: 3px solid rgb(61, 50, 50);
-margin: 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family:  'bradley hand';
-font-size: 20px;
-color: white;
+  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, #1B1B1B 10px, transparent 10px),
+  linear-gradient(#1D1D1D 25%, #1A1A1A 25%, #1A1A1A 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+  border-radius: 5cm;
+  opacity: 0.8;
+  border: 3px solid rgb(61, 50, 50);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:  'bradley hand';
+  font-size: 20px;
+  color: white;
+}
+
+.topDiv, h2 {
+  position: relative;
+  color: white;
+  font-size: 20px;
 }
 
 @keyframes border {
@@ -125,42 +131,43 @@ color: white;
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  align-items: center;
   background-color: black;
   height: 8vh;
   width: 100%;
   border-radius: 5cm;
-  /* color: white;
-  animation-name: wordScroll;
-  animation-duration: 10s;
-  animation-iteration-count: infinite; */
+  color: white;
+  
+ 
   
 }
 .textLine {
   color: white;
-  animation-name: wordScroll;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation: wordScroll 30s linear infinite;
+  font-size: 40px;
+  
 }
 
-@keyframes wordScroll{
-    0%{
-      justify-content: flex-start;
-      /* background: white; */
-    }
-    50%  {justify-content: center;}
-    100% {justify-content: flex-end;}
-}
-
-#search{
-  display: flex;
-  justify-content: right;
-  width: 20vw;
-  border-block: pink;
-  border-radius: 5cm;
-  box-shadow: 8px 5px 15px grey;
-  border-color: lightcoral;
-  /* cursor: url(///images/bear1.png), auto; */
-}
+@-moz-keyframes wordScroll {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+ }
+ @-webkit-keyframes wordScroll {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+ }
+ @keyframes wordScroll {
+  0%   { 
+  -moz-transform: translateX(100%); /* Firefox bug fix */
+  -webkit-transform: translateX(100%); /* Firefox bug fix */
+  transform: translateX(100%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); /* Firefox bug fix */
+  -webkit-transform: translateX(-100%); /* Firefox bug fix */
+  transform: translateX(-200%); 
+  }
+ }
 
 .beneath-search{
   display: flex;
@@ -205,4 +212,30 @@ border: 3px solid rgb(61, 50, 50);
 z-index: auto;
 }
   
+
+@media (max-width: 1180px){
+  .topDiv{
+    width: 24vw;
+  } 
+
+  .divContainer{
+    width: 75vw;
+  }
+  .topDiv, h2 {
+    position: relative;
+    color: white;
+    font-size: 10px;
+  }
+
+  .textLine {
+    color: white;
+    font-size: 20px;
+  }
+
+  .beneath-search{
+    width: 75vw;
+    height: 20vh;
+  }
+
+}
 
