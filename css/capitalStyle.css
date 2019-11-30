@@ -195,6 +195,11 @@ footer{
 
 #wrong{
   background-color: black;
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  color: red;
+  justify-content: center;
 }
 
 .standardDivStyle{

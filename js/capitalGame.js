@@ -83,6 +83,10 @@ window.onload = async function () {
       }
       else {
         wrong.classList.add("styleWrong")
+        score -= 2;
+        let loss = -2;
+        correct.innerHTML = `<h1>${score}</h1 color="white">`;
+        wrong.innerHTML = `<h1>${loss}</h1 color="white">`;
       }
     }
     // console.log(score);
