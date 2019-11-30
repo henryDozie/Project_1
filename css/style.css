@@ -2,7 +2,14 @@
 header{
   display: flex;
   justify-content: center;
-  font-size: xx-large;
+  margin-top: -40px;
+  width: 100vw;
+}
+
+#headImage{
+  width: 50vw;
+  margin-top: 0;
+  opacity: 0.8;
 }
 
 .divContainer{
@@ -28,6 +35,7 @@ linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla
 linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
 background-color: #300;
 background-size: 50px 50px;
+overflow: hidden;
 }
 
 .topDiv{
@@ -134,17 +142,14 @@ background-size: 50px 50px;
   align-items: center;
   background-color: black;
   height: 8vh;
-  width: 100%;
-  border-radius: 5cm;
-  color: white;
-  
- 
-  
+  width: 110vw;
+  margin-left: -10px;
 }
 .textLine {
   color: white;
   animation: wordScroll 30s linear infinite;
-  font-size: 40px;
+  font-size: 35px;
+  
   
 }
 
@@ -160,7 +165,7 @@ background-size: 50px 50px;
   0%   { 
   -moz-transform: translateX(100%); /* Firefox bug fix */
   -webkit-transform: translateX(100%); /* Firefox bug fix */
-  transform: translateX(100%); 		
+  transform: translateX(155%); 		
   }
   100% { 
   -moz-transform: translateX(-100%); /* Firefox bug fix */
@@ -214,8 +219,26 @@ z-index: auto;
   
 
 @media (max-width: 1180px){
+
+  header{
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    width: 40vw;
+  }
+
+  #headImage{
+    width: 70vw;
+    margin-top: 10%;
+    margin-left: 43%;
+    opacity: 0.8;
+  }
+
   .topDiv{
     width: 24vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   } 
 
   .divContainer{
@@ -224,18 +247,80 @@ z-index: auto;
   .topDiv, h2 {
     position: relative;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .textLine {
     color: white;
-    font-size: 20px;
+    /* font-size: 15px; */
   }
 
   .beneath-search{
-    width: 75vw;
-    height: 20vh;
+    width: 100vw;
+    height: 40vh;
+    margin: 60px auto;
+    margin-left: 40px;
   }
 
 }
 
+
+
+@media (max-width: 1024px){
+
+  body{
+    overflow: hidden;
+  }
+
+  .divContainer{
+    display: flex;
+    width: 190vw;
+    margin-left: 30px;
+  }
+
+
+  #headImage{
+    width: 120vw;
+    margin-top: 10%;
+    margin-left: 60%;
+    margin-bottom: 10%;
+    opacity: 0.8;
+  }
+
+  .topDiv{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .topDiv, h2 {
+    position: relative;
+    color: white;
+    font-size: 30px;
+  }
+
+  .textLine {
+    color: white;
+    font-size: 30px;
+  }
+
+  .search-section{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 10vh;
+    width: 200vw;
+    margin-left: -10px;
+  }
+
+  .beneath-search{
+    width: 180vw;
+    height: 100vh;
+    margin-left: 70px;
+  }
+
+
+}

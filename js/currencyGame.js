@@ -1,4 +1,4 @@
-window.onload = async function () { 
+window.onload = async function () {
   const base_Url = 'https://restcountries.eu/rest/v2/name/'
   const currency_Url = `https://restcountries.eu/rest/v2/currency/`;
   const answer = document.querySelector('#submitButton')
@@ -12,6 +12,7 @@ window.onload = async function () {
   let getFromAPI = "";
   let score = 0;
   let countryCurrenciesArray = [];
+
 
   //--------------> Add all existing countries to an array "countryArray"
   const result = await axios.get(`${countriesList}`)
@@ -43,13 +44,13 @@ window.onload = async function () {
     getFromAPI = await axios.get(`${base_Url}${query}`)
     countryCurrenciesArray = getFromAPI.data[0].currencies;
     console.log(countryCurrenciesArray);
-    
+
     correct.classList.remove("styleCorrect");
     wrong.classList.remove("styleWrong");
     searchInput.value = ""
   }
   //--------------------------------->
-  
+
   /*--------------------------------->
   Set up event listener for setting and displaying the country
   *///------------------------------->
@@ -66,8 +67,8 @@ window.onload = async function () {
     const response = searchInput.value.toUpperCase()
     let flag = false;
     for (i = 0; i < countryCurrenciesArray.length; i++) {
-      
-      if (response === countryCurrenciesArray[i].code.toUpperCase()){
+
+      if (response === countryCurrenciesArray[i].code.toUpperCase()) {
         flag = true;
       }
     }
@@ -80,14 +81,16 @@ window.onload = async function () {
     }
     else {
       wrong.classList.add("styleWrong")
+      score -= 2;
+      correct.innerHTML = `<h1>${score}</h1 color="white">`;
     }
 
   });
 
-    /*--------------------------------->
-    Random generation of an index to pick country from the array of countries
-  *///------------------------------->
-    function generateCountry() {
+  /*--------------------------------->
+  Random generation of an index to pick country from the array of countries
+*///------------------------------->
+  function generateCountry() {
     let playCount = 0
     const cntryIndex = Math.floor((Math.random() * 250) + 1);
     countryName = countryArray[cntryIndex]
