@@ -8,7 +8,7 @@ window.onload = async function () {
   const yay = document.createElement("img")
   // const scoreCard = document.querySelector();
   const correct = document.querySelector("#correct")
-  let timeCircle = document.querySelector("#timeCircle")
+  const timeCircle = document.querySelector("#timeCircle")
   const wrong = document.querySelector("#wrong")
   const countriesList = 'https://restcountries.eu/rest/v2/all'
   const base_Url = 'https://restcountries.eu/rest/v2/name/'
@@ -17,6 +17,8 @@ window.onload = async function () {
   const hintDisplay = document.createElement("h1")
   const hintCircle = document.querySelector("#timeCircle")
   const homePage = document.querySelector('#headImage')
+  const scoreCircle = document.querySelector("#scoreCircle")
+  const correctAnswerDisplay = document.createElement("h1")
 
   let trueCapital = "";
   let capitalCity = "";
@@ -53,12 +55,17 @@ window.onload = async function () {
     searchInput.value = ""
     console.log(hint)
     hintDisplay.innerHTML = "";
+    correctAnswerDisplay.innerHTML = "";
+    scoreCircle.setAttribute("id", "scoreCircle")
     hintCircle.classList.add("hintDisplay")
+    correctAnswerDisplay.classList.remove("answerStyle")
+    // correctAnswerDisplay.setAttribute("id", "scoreCircle")
     timeCircle.setAttribute("id", "timeCircle")
   }
 
   setButton.addEventListener("click", function () {
     setCountry()
+    hintCircle.appendChild(hintDisplay)
   })
 
   answer.addEventListener("click", async function (evt) {
@@ -79,15 +86,25 @@ window.onload = async function () {
         correct.classList.add("styleCorrect");
         score += 5;
         correct.innerHTML = `<h1>${score}</h1>`;
-        hintCircle.appendChild(hintDisplay)
+        // hintCircle.appendChild(hintDisplay)
       }
       else {
         wrong.classList.add("styleWrong")
-        score -= 2;
-        let loss = -2;
+        score -= 1;
+        let loss = -1;
         correct.innerHTML = `<h1>${score}</h1 color="white">`;
         wrong.innerHTML = `<h1>${loss}</h1 color="white">`;
+        correctAnswerDisplay.innerHTML = capitalCity
+        scoreCircle.removeAttribute("id", "scoreCircle")
+        scoreCircle.appendChild(correctAnswerDisplay)
+        scoreCircle.classList.add("answerStyle")
+
       }
+
+      if (score >= 25) {
+        alert("CONGRATULATIONS!\nYOU ARE A CHAMP");
+      }
+
     }
     // console.log(score);
 
@@ -138,12 +155,7 @@ window.onload = async function () {
   }
 
   homePage.addEventListener("click", async function () {
-    window.open("index.html");
-})
-
-
-
+    window.open("index.html", '_self');
+  })
 
 }
-
-
